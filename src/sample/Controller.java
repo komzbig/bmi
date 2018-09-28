@@ -44,7 +44,7 @@ public class Controller {
             Komunikat.setText("III stopień otyłości (otyłość skrajna)");
         }
 
-        //wynik = Double.parseDouble(df2.format(wynik));
+
         label.setText("BMI " + valueOf(df2.format(wynik)));
 
         System.out.println("Zostałem kliknięty "+ wynik);

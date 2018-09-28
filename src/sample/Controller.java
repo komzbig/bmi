@@ -4,15 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import java.text.DecimalFormat;
 
+import static java.lang.String.valueOf;
 
 public class Controller {
+    private static DecimalFormat df2 = new DecimalFormat(".##");
 
     @FXML
     private void handleButtonAction(ActionEvent event){
         double masa = Double.parseDouble(wagaTF.getText());
 
-        double wzrostkwadrat = Double.parseDouble(wzrostTF.getText()) * Double.parseDouble(wzrostTF.getText());
+        double wzrostkwadrat = (Double.parseDouble(wzrostTF.getText()) * Double.parseDouble(wzrostTF.getText()))/10000;
 
         double wynik = (double)masa/wzrostkwadrat;
         String wyniktekst;
@@ -41,8 +44,9 @@ public class Controller {
             Komunikat.setText("III stopień otyłości (otyłość skrajna)");
         }
 
+        //wynik = Double.parseDouble(df2.format(wynik));
+        label.setText("BMI " + valueOf(df2.format(wynik)));
 
-        label.setText(Double.toString(wynik));
         System.out.println("Zostałem kliknięty "+ wynik);
     }
     @FXML

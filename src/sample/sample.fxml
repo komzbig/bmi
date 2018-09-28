@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onDragDetected="#handleButtonAction" prefHeight="309.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+
+      <Label layoutX="27.0" layoutY="84.0" prefHeight="21.0" prefWidth="173.0" text="Podaj wagę" />
+      <Label layoutX="27.0" layoutY="139.0" prefHeight="21.0" prefWidth="173.0" text="Podaj wzrost" />
+      <Label fx:id="label" layoutX="27.0" layoutY="258.0" prefHeight="21.0" prefWidth="173.0" text="Wynik BMI">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="207.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="173.0" text="Przelicz" />
+      <TextField fx:id="wagaTF" layoutX="200.0" layoutY="79.0" />
+      <TextField fx:id="wzrostTF" layoutX="200.0" layoutY="134.0" />
+      <Label fx:id="Komunikat" layoutX="27.0" layoutY="288.0" />
+   </children>
+</AnchorPane>
